@@ -24,7 +24,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     compileOnly 'org.projectlombok:lombok'
-    compileOnly ('org.mariadb.jdbc:mariadb-java-client:3.0.6')
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'mysql:mysql-connector-java'
     annotationProcessor 'org.projectlombok:lombok'
@@ -36,6 +35,10 @@ dependencies {
     compileOnly group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.2'
     runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.2'
     runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.2'
+
+    compileOnly group: 'org.springframework', name: 'spring-jdbc', version: '5.2.3.RELEASE'
+    compileOnly group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.1'
+    compileOnly("org.mariadb.jdbc:mariadb-java-client")
 }
 
 tasks.named('test') {
